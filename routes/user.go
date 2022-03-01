@@ -14,6 +14,7 @@ type UserSerializer struct {
 	ID       uint   `json:"id"`
 	UserName string `json:"username"`
 	Email    string `json:"email"`
+	Admin    bool   `json:"admin"`
 }
 
 func getHash(pwd []byte) string {
