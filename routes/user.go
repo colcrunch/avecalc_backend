@@ -30,6 +30,7 @@ func serializeUser(modelUser models.User) UserSerializer {
 		ID:       modelUser.ID,
 		UserName: modelUser.UserName,
 		Email:    modelUser.Email,
+		Admin:    modelUser.Admin,
 	}
 }
 
