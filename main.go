@@ -6,6 +6,7 @@ import (
 	"github.com/colcrunch/avecalc_backend/database"
 	"github.com/colcrunch/avecalc_backend/routes"
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 )
 
 func welcome(c *fiber.Ctx) error {
@@ -14,6 +15,7 @@ func welcome(c *fiber.Ctx) error {
 
 func main() {
 	app := fiber.New()
+	app.Use(cors.New())
 
 	database.ConnectDB()
 
